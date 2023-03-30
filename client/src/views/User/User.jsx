@@ -1,40 +1,8 @@
+import { useSelector } from "react-redux";
+
 const User = () => {
 
-  const user = [
-    {
-      "Usu_Id": "2ac8321b-784d-4c04-adbd-f8a8c55f46ac",
-      "Usu_Nombre": "Jessica",
-      "Usu_Apellido": "Correa",
-      "Usu_Telefono": "3193241477",
-      "Usu_Correo": "jesssss@gmail.com",
-      "Usu_Contraseña": "1234343",
-      "Usu_Genero": "Femenino",
-      "Usu_Estado": "Activo",
-      "rolRolId": null
-    },
-    {
-      "Usu_Id": "bb9582ac-43c5-491d-91b6-2c0ad935474e",
-      "Usu_Nombre": "Daniela",
-      "Usu_Apellido": "Toro",
-      "Usu_Telefono": "3193241477",
-      "Usu_Correo": "daniiii@gmail.com",
-      "Usu_Contraseña": "1234343",
-      "Usu_Genero": "Femenino",
-      "Usu_Estado": "Activo",
-      "rolRolId": null
-    },
-    {
-      "Usu_Id": "5502a8f2-8157-4ac2-b3e4-bd84f26402b0",
-      "Usu_Nombre": "Cristian",
-      "Usu_Apellido": "Muñoz",
-      "Usu_Telefono": "3193241477",
-      "Usu_Correo": "crisss@gmail.com",
-      "Usu_Contraseña": "1234343",
-      "Usu_Genero": "Masculino",
-      "Usu_Estado": "Activo",
-      "rolRolId": null
-    }
-  ]
+  const users = useSelector(state => state.users);
 
     return (
       <>
@@ -51,7 +19,7 @@ const User = () => {
             </tr>
             
             {
-            user.map(user => {
+            users.map(user => {
              return (
             <tr>
               <td>{user.Usu_Nombre}</td>
