@@ -1,0 +1,1 @@
+// Nos da un estado global
