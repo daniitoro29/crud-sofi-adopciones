@@ -4,7 +4,7 @@
 
 import { createStore, applyMiddleware, compose } from "redux";
 import rootReducer from "./reducer";
-import thunkMiddleware from "redux-thunk";
+import thunkMiddleware from "redux-thunk"; // Le permite a redux hacer operaciones asincronas
 
 const composeEnhacer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE || compose;
 

@@ -1,14 +1,10 @@
-import Form from "./views/Form/Form";
-import Login from "./views/Login/Login";
-import User from "./views/User/User";
+import Home from "./views/Home/Home";
 
 function App() {
 
   return (
     <div className="App">
-      <Form />
-      <User />
-      <Login />
+      <Home />
     </div>
   );
 }
