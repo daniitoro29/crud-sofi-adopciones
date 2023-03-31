@@ -8,11 +8,12 @@ import { getUsers } from "../../redux/actions";
 
 
 function Home() {
-/*   const dispatch = useDispatch;
+  const dispatch = useDispatch();
+
   useEffect(() => {
-      dispatch(getUsers());
-      // eslint-disable-next-line
-  }, []); */
+    dispatch(getUsers());
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <div>
