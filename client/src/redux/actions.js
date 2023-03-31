@@ -24,3 +24,17 @@ export const deleteUser = (Usu_Id) => async (dispatch) => {
   }
 }
 
+export const CREATE_USER ='CREATE_USER';
+
+export const createUser = ({Usu_Nombre,Usu_Apellido,Usu_Telefono,Usu_Correo,Usu_Contraseña,Usu_Genero,Usu_Estado}) => async (dispatch) => {
+  try {
+    const response = await axios.post(`http://localhost:3001/users`, {
+      Usu_Nombre,Usu_Apellido,Usu_Telefono,Usu_Correo,Usu_Contraseña,Usu_Genero,Usu_Estado
+    });
+    const users = response.data;
+    dispatch({type: CREATE_USER, payload: users});
+  } catch (error) {
+    console.error (error);
+  }
+}
+

@@ -1,6 +1,9 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { createUser } from "../../redux/actions";
 
 const Form = () => {
+  const dispatch = useDispatch();
   const [form, setForm] = useState({
     nombre: "",
     apellido: "",
@@ -18,6 +21,17 @@ const changeHandler = (event) => {
   setForm({
     ...form, [property]:value
   })
+}
+
+const handleSend = () => {
+  dispatch(createUser({Usu_Nombre:form.nombre, 
+    Usu_Apellido:form.apellido, 
+    Usu_Telefono:form.telefono, 
+    Usu_Correo:form.correo, 
+    Usu_Contraseña:form.contraseña, 
+    Usu_Genero:form.genero, 
+    Usu_Estado:form.estado} ));
+
 }
 
   return (
@@ -41,12 +55,12 @@ const changeHandler = (event) => {
 
         <div>
           <label>Correo: </label>
-          <input type="text" name="correo" value={form.correo} onChange={changeHandler}/>
+          <input type="email" name="correo" value={form.correo} onChange={changeHandler}/>
         </div>
 
         <div>
           <label>Contraseña: </label>
-          <input type="text" name="contraseña" value={form.contraseña} onChange={changeHandler}/>
+          <input type="password" name="contraseña" value={form.contraseña} onChange={changeHandler}/>
         </div>
 
         <div>
@@ -58,8 +72,8 @@ const changeHandler = (event) => {
           <label>Estado: </label>
           <input type="text" name="estado" value={form.estado} onChange={changeHandler}/>
         </div>
-        <input type="submit" value="Registrarse" />
       </form>
+        <button type="submit"  onClick={handleSend}>Registrarse</button>
     </>
   );
 };
