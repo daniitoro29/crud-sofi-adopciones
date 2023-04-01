@@ -38,3 +38,14 @@ export const createUser = ({Usu_Nombre,Usu_Apellido,Usu_Telefono,Usu_Correo,Usu_
   }
 }
 
+export const EDIT_USER = 'EDIT_USER';
+
+export const editUser = (Usu_Id) => async (dispatch) => {
+  try {
+    const response = await axios.put(`http://localhost:3001/users/${Usu_Id}`)
+    const users = response.data;
+    dispatch({type: EDIT_USER, payload: users})
+  } catch (error) {
+    console.error(error);
+  }
+}
