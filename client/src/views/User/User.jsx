@@ -1,14 +1,20 @@
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { deleteUser } from "../../redux/actions";
+import { deleteUser, editUser } from "../../redux/actions";
 
 const User = () => {
   const users = useSelector((state) => state.users);
 
   const dispatch = useDispatch();
 
-  const handleDelete = () => {
-    dispatch(deleteUser(users[0].Usu_Id));
+  const handleDelete = (user) => {
+    dispatch(deleteUser(user.Usu_Id));
+  };
+
+  const handlerEdit = (user) => {
+    const userResult = users.filter((u) => u.Usu_Id === user.Usu_Id)[0];
+    console.log('Este es el usuario que vamos a editar', userResult);
+    // dispatch(editUser(userResult.Usu_Id));
   };
 
   return (
@@ -36,10 +42,10 @@ const User = () => {
                 <td>{user.Usu_Genero}</td>
                 <td>{user.Usu_Estado}</td>
                 <td>
-                  <button>Editar datos</button>
+                  <button onClick={() => handlerEdit(user)}>Editar datos</button>
                 </td>
                 <td>
-                  <button onClick={handleDelete}>Eliminar usuario</button>
+                  <button onClick={() => handleDelete(user)}>Eliminar usuario</button>
                 </td>
               </tr>
             );

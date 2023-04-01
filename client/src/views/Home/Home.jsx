@@ -1,5 +1,4 @@
 import Form from "../Form/Form";
-import Login from "../Login/Login";
 import User from "../User/User";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
@@ -8,7 +7,6 @@ import '../Home/Home.css';
 
 function Home() {
   const [isRegister, setIsRegister] = useState(false);
-  const [isLogin, setIsLogin] = useState(false);
   const [showUser, setShowUser] = useState(false);
   const dispatch = useDispatch();
 
@@ -21,10 +19,6 @@ function Home() {
     setIsRegister(true);
   };
 
-  const handlerLogin = () => {
-    setIsLogin(true);
-  };
-
   const handlerUser = () => {
     setShowUser(true);
   }
@@ -34,10 +28,6 @@ function Home() {
       <div>
         <button className="buttonHome" onClick={handlerRegister}>Registrarse</button>
         {isRegister ? <Form /> : null}
-      </div>
-      <div>
-        <button className="buttonHome" onClick={handlerLogin}>Ingresar</button>
-        {isLogin ? <Login /> : null}
       </div>
       <div>
         <button className="buttonHome" onClick={handlerUser}>Usuarios registrados</button>
