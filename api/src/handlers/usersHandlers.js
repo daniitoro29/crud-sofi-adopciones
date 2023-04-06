@@ -49,6 +49,7 @@ const getUserHandler = async (req, res) => {
 const updateUserHandler = async (req, res) => {
     const { id } = req.params;
     const { Usu_Nombre, Usu_Apellido,Usu_Telefono, Usu_Correo, Usu_Contraseña, Usu_Genero, Usu_Estado} = req.body;
+    console.log('Esto es req.body en el backend', req.body);
     try {
     const updateUser = await updateUserById(id, Usu_Nombre, Usu_Apellido,Usu_Telefono, Usu_Correo, Usu_Contraseña, Usu_Genero, Usu_Estado);
 

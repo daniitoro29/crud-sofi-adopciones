@@ -3,7 +3,7 @@ import User from "../User/User";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { getUsers } from "../../redux/actions";
-import '../Home/Home.css';
+import "../Home/Home.css";
 
 function Home() {
   const [isRegister, setIsRegister] = useState(false);
@@ -21,19 +21,22 @@ function Home() {
 
   const handlerUser = () => {
     setShowUser(true);
-  }
+  };
 
   return (
-    <div className="containerHome">
-      <div>
-        <button className="buttonHome" onClick={handlerRegister}>Registrarse</button>
+    <div>
+      <h1>Fundación Peluditos con Futuro</h1>
+      <div className="containerHome">
+        <button className="buttonHome" onClick={handlerRegister}>
+          Registrarse
+        </button>
         {isRegister ? <Form /> : null}
       </div>
       <div>
-        <button className="buttonHome" onClick={handlerUser}>Usuarios registrados</button>
-        {
-          showUser ?  <User /> : null
-        }
+        <button className="buttonHome" onClick={handlerUser}>
+          Usuarios registrados
+        </button>
+        {showUser ? <User /> : null}
       </div>
     </div>
   );

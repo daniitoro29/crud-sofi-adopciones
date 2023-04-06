@@ -40,10 +40,13 @@ export const createUser = ({Usu_Nombre,Usu_Apellido,Usu_Telefono,Usu_Correo,Usu_
 
 export const EDIT_USER = 'EDIT_USER';
 
-export const editUser = (Usu_Id) => async (dispatch) => {
+export const editUser = ({Usu_Id, Usu_Nombre, Usu_Apellido,Usu_Telefono, Usu_Correo, Usu_Contraseña, Usu_Genero, Usu_Estado}) => async (dispatch) => {
   try {
-    const response = await axios.put(`http://localhost:3001/users/${Usu_Id}`)
+    const response = await axios.put(`http://localhost:3001/users/${Usu_Id}`, {
+      Usu_Nombre, Usu_Apellido,Usu_Telefono, Usu_Correo, Usu_Contraseña, Usu_Genero, Usu_Estado
+    })
     const users = response.data;
+    console.log('Soy users en actions ***', users );
     dispatch({type: EDIT_USER, payload: users})
   } catch (error) {
     console.error(error);
