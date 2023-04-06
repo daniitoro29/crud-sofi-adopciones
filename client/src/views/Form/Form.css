@@ -18,3 +18,30 @@
     display: flex;
     width: 90px;
 }
+
+.buttonForm {
+    margin-top: 20px;
+    display: flex;
+    width: 100px;
+    height: 25px;
+    padding: 10px 10px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    outline: none;
+    background-color: #6178ad;;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 1px #6178ad;
+  }
+  
+  .buttonForm:hover {background-color: #859ed6}
+  
+  .buttonForm:active {
+    background-color: #8896b8;
+    box-shadow: 0 5px #F0FFF0;
+    transform: translateY(4px);
+  }

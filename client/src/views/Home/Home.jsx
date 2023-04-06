@@ -24,19 +24,24 @@ function Home() {
   };
 
   return (
-    <div>
+    <div className="container-general_home">
+      <header className="container-general_header">
+      <img src="https://peluditosconfuturo.org/wp-content/uploads/2015/01/logo2.png" alt="log" />
       <h1>Fundación Peluditos con Futuro</h1>
+      </header>
       <div className="containerHome">
-        <button className="buttonHome" onClick={handlerRegister}>
-          Registrarse
-        </button>
-        {isRegister ? <Form /> : null}
-      </div>
-      <div>
-        <button className="buttonHome" onClick={handlerUser}>
-          Usuarios registrados
-        </button>
-        {showUser ? <User /> : null}
+        <div>
+          <button className="buttonHome" onClick={handlerRegister}>
+            Registrarse
+          </button>
+          {isRegister ? <Form /> : null}
+        </div>
+        <div>
+          <button className="buttonHome" onClick={handlerUser}>
+            Usuarios registrados
+          </button>
+          {showUser ? <User /> : null}
+        </div>
       </div>
     </div>
   );

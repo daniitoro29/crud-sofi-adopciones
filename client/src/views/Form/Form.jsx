@@ -114,7 +114,7 @@ const Form = () => {
             />
           </div>
         </form>
-        <button className="form-button" type="submit" onClick={handleSend}>
+        <button className="buttonForm" type="submit" onClick={handleSend}>
           Registrarse
         </button>
       </div>

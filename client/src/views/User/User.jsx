@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { deleteUser, editUser } from "../../redux/actions";
 import { useState } from "react";
+import "../User/User.css";
 
 const User = () => {
   const [isEdit, setIsEdit] = useState(false);
@@ -89,13 +90,13 @@ const User = () => {
                 <td>{user.Usu_Genero}</td>
                 <td>{user.Usu_Estado}</td>
                 <td>
-                  <button onClick={() => handlerEdit(user)}>
-                    Editar datos
+                  <button className="buttonUser" onClick={() => handlerEdit(user)}>
+                    Editar
                   </button>
                 </td>
                 <td>
-                  <button onClick={() => handleDelete(user)}>
-                    Eliminar usuario
+                  <button className="buttonUser" onClick={() => handleDelete(user)}>
+                    Eliminar
                   </button>
                 </td>
               </tr>
@@ -177,7 +178,7 @@ const User = () => {
             </div>
           </form>
           <button
-            className="form-button"
+            className="buttonUser"
             type="submit"
             onClick={handlerUpdate}
           >
