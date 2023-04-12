@@ -4,4 +4,25 @@ Se realiza CRUD haciendo uso de PostgreSQL como base de datos, react para el fro
 
 Ingresar a Registrate para registrar un nuevo usuario o a Usuarios para consultar los usuarios registrados, editarlos y/o eliminarlos.
 
-#### Al realizar alguna acción, la página quedará en blanco y debe recargarse para poder ver los datos actualizados. 
+#### Página de inicio 
+<img width="1722" alt="Captura de Pantalla 2023-04-11 a la(s) 11 02 30 p m" src="https://user-images.githubusercontent.com/97687455/231346254-f4b9121a-6bbb-4705-a4d9-30aa53c4140d.png">
+
+#### Página para registrarse
+<img width="1723" alt="Captura de Pantalla 2023-04-11 a la(s) 11 02 59 p m" src="https://user-images.githubusercontent.com/97687455/231346313-36c6ad5a-1ff4-4bfd-9588-fbb27913b3d3.png">
+
+#### Página para ver todo el listado de usuarios
+<img width="1720" alt="Captura de Pantalla 2023-04-11 a la(s) 11 03 38 p m" src="https://user-images.githubusercontent.com/97687455/231346399-3803940d-e6c1-427c-9135-f70aa0f791cb.png">
+
+#### Editar un usuario
+Al dar clic en editar, se abre un formulario donde se muestran los datos actuales del usuario, al modificarlos y dar clic en el boton actualizar, inmediatamente estos cambios se verán reflejados en el listado de usuarios. 
+
+<img width="1724" alt="Captura de Pantalla 2023-04-11 a la(s) 11 04 22 p m" src="https://user-images.githubusercontent.com/97687455/231346487-d093b442-f459-4e2d-8a1a-37bdd17d7d6b.png">
+
+<img width="1725" alt="Captura de Pantalla 2023-04-11 a la(s) 11 05 46 p m" src="https://user-images.githubusercontent.com/97687455/231346656-834c0914-35dd-42d7-8d30-bef42b373f58.png">
+
+#### Eliminar un usuario
+Al dar click en eliminar, el usuario es eliminado de la base de datos y deja de mostrarse en el listado de usuarios. 
+
+<img width="1722" alt="Captura de Pantalla 2023-04-11 a la(s) 11 06 41 p m" src="https://user-images.githubusercontent.com/97687455/231346795-7e6c5e1b-49e7-4f9f-9368-2c86bad1c4b9.png">
+
+## El proyecto se encuentra en desarrollo por lo cúal sus estilos y funcionalidad se irá mejorando. 
