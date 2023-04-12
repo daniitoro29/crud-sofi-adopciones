@@ -6,7 +6,7 @@ import "../User/User.css";
 
 const User = () => {
   const [isEdit, setIsEdit] = useState(false);
-  const [ userState, setUser ] = useState('');
+  const [userState, setUser] = useState("");
   const users = useSelector((state) => state.users);
   const [form, setForm] = useState({
     nombre: "",
@@ -68,40 +68,52 @@ const User = () => {
   return (
     <>
       <h2>Usuarios Registrados</h2>
-      <div>
+      <div className="table-container">
         <table>
-          <tr>
-            <th>Nombre</th>
-            <th>Apellido</th>
-            <th>Teléfono</th>
-            <th>Correo</th>
-            <th>Genero</th>
-            <th>Estado</th>
-            <th></th>
-          </tr>
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Teléfono</th>
+              <th>Correo</th>
+              <th>Genero</th>
+              <th>Estado</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
 
-          {users.map((user) => {
-            return (
-              <tr key={user.Usu_Id}>
-                <td>{user.Usu_Nombre}</td>
-                <td>{user.Usu_Apellido}</td>
-                <td>{user.Usu_Telefono}</td>
-                <td>{user.Usu_Correo}</td>
-                <td>{user.Usu_Genero}</td>
-                <td>{user.Usu_Estado}</td>
-                <td>
-                  <button className="buttonUser" onClick={() => handlerEdit(user)}>
-                    Editar
-                  </button>
-                </td>
-                <td>
-                  <button className="buttonUser" onClick={() => handleDelete(user)}>
-                    Eliminar
-                  </button>
-                </td>
-              </tr>
-            );
-          })}
+          {Array.isArray(users) &&
+            users.map((user) => {
+              return (
+                <tbody key={user.Usu_Id}>
+                  <tr>
+                    <td>{user.Usu_Nombre}</td>
+                    <td>{user.Usu_Apellido}</td>
+                    <td>{user.Usu_Telefono}</td>
+                    <td>{user.Usu_Correo}</td>
+                    <td>{user.Usu_Genero}</td>
+                    <td>{user.Usu_Estado}</td>
+                    <td>
+                      <button
+                        className="buttonUser"
+                        onClick={() => handlerEdit(user)}
+                      >
+                        Editar
+                      </button>
+                    </td>
+                    <td>
+                      <button
+                        className="buttonUser"
+                        onClick={() => handleDelete(user)}
+                      >
+                        Eliminar
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              );
+            })}
         </table>
       </div>
       {isEdit && (
@@ -177,11 +189,7 @@ const User = () => {
               />
             </div>
           </form>
-          <button
-            className="buttonUser"
-            type="submit"
-            onClick={handlerUpdate}
-          >
+          <button className="buttonUser" type="submit" onClick={handlerUpdate}>
             Actualizar
           </button>
         </>

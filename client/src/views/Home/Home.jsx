@@ -1,5 +1,4 @@
-import Form from "../Form/Form";
-import User from "../User/User";
+import { Redirect } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { getUsers } from "../../redux/actions";
@@ -23,14 +22,21 @@ function Home() {
     setShowUser(true);
   };
 
+  if (isRegister) {
+    return <Redirect to="/register" />;
+  }
+  if (showUser) {
+    return <Redirect to="/users" /> ;
+  }
+
   return (
     <div className="container-general_home">
       <nav>
         <ul>
-            <img
-              src="https://peluditosconfuturo.org/wp-content/uploads/2015/01/logo2.png"
-              alt="log"
-            />
+          <img
+            src="https://peluditosconfuturo.org/wp-content/uploads/2015/01/logo2.png"
+            alt="log"
+          />
 
           <ol>
             <p>Inicio</p>
@@ -44,13 +50,11 @@ function Home() {
           <ol>
             <p onClick={handlerRegister}>
               Registrate
-              {isRegister && <Form />}
             </p>
           </ol>
           <ol>
             <p onClick={handlerUser}>
               Usuarios
-              {showUser && <User /> }
             </p>
           </ol>
         </ul>
