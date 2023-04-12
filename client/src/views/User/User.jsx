@@ -1,8 +1,9 @@
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { deleteUser, editUser } from "../../redux/actions";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../User/User.css";
+import { getUsers } from "../../redux/actions";
 
 const User = () => {
   const [isEdit, setIsEdit] = useState(false);
@@ -18,6 +19,13 @@ const User = () => {
     estado: "",
   });
 
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getUsers());
+    // eslint-disable-next-line
+  }, [users]);
+
   const changeHandler = (event) => {
     const property = event.target.name;
     const value = event.target.value;
@@ -27,8 +35,6 @@ const User = () => {
       [property]: value,
     });
   };
-
-  const dispatch = useDispatch();
 
   const handleDelete = (user) => {
     dispatch(deleteUser(user.Usu_Id));

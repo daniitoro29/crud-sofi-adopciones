@@ -1,18 +1,11 @@
 import { Redirect } from "react-router-dom";
-import { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
-import { getUsers } from "../../redux/actions";
+import { useState } from "react";
+
 import "../Home/Home.css";
 
 function Home() {
   const [isRegister, setIsRegister] = useState(false);
   const [showUser, setShowUser] = useState(false);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(getUsers());
-    // eslint-disable-next-line
-  }, []);
 
   const handlerRegister = () => {
     setIsRegister(true);
@@ -26,7 +19,7 @@ function Home() {
     return <Redirect to="/register" />;
   }
   if (showUser) {
-    return <Redirect to="/users" /> ;
+    return <Redirect to="/users" />;
   }
 
   return (
@@ -48,14 +41,10 @@ function Home() {
             <p>Adopciones</p>
           </ol>
           <ol>
-            <p onClick={handlerRegister}>
-              Registrate
-            </p>
+            <p onClick={handlerRegister}>Registrate</p>
           </ol>
           <ol>
-            <p onClick={handlerUser}>
-              Usuarios
-            </p>
+            <p onClick={handlerUser}>Usuarios</p>
           </ol>
         </ul>
       </nav>
