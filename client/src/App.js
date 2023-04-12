@@ -2,6 +2,7 @@ import { Route } from "react-router-dom";
 import Home from "./views/Home/Home";
 import Form from "./views/Form/Form";
 import User from "./views/User/User";
+import Login from "./views/Login/Login";
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
       </Route>
       <Route path="/users">
         <User />
+      </Route>
+      <Route path="/login">
+        <Login />
       </Route>
     </div>
   );

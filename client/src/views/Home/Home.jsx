@@ -6,6 +6,7 @@ import "../Home/Home.css";
 function Home() {
   const [isRegister, setIsRegister] = useState(false);
   const [showUser, setShowUser] = useState(false);
+  const [ isLogin, setIsLogin ] = useState(false);
 
   const handlerRegister = () => {
     setIsRegister(true);
@@ -15,11 +16,18 @@ function Home() {
     setShowUser(true);
   };
 
+  const handlerLogin = () => {
+    setIsLogin(true);
+  }
+
   if (isRegister) {
     return <Redirect to="/register" />;
   }
   if (showUser) {
     return <Redirect to="/users" />;
+  }
+  if (isLogin) {
+    return <Redirect to="/login" />;
   }
 
   return (
@@ -45,6 +53,9 @@ function Home() {
           </ol>
           <ol>
             <p onClick={handlerUser}>Usuarios</p>
+          </ol>
+          <ol>
+            <p onClick={handlerLogin}>Ingresar</p>
           </ol>
         </ul>
       </nav>
