@@ -104,22 +104,21 @@ const Form = () => {
 
           <div>
             <label className="containter-form_label">Género: </label>
-            <input
-              type="text"
-              name="genero"
-              value={form.genero}
-              onChange={changeHandler}
-            />
+            <select name="genero" value={form.genero} onChange={changeHandler}>
+              <option value="">Seleccione una opción</option>
+              <option value="Femenino">Femenino</option>
+              <option value="Masculino">Masculino</option>
+              <option value="0tro">Otro</option>
+            </select>
           </div>
 
           <div>
             <label className="containter-form_label">Estado: </label>
-            <input
-              type="text"
-              name="estado"
-              value={form.estado}
-              onChange={changeHandler}
-            />
+            <select name="estado" value={form.estado} onChange={changeHandler}>
+              <option value="">Seleccione una opción</option>
+              <option value="Activo">Activo</option>
+              <option value="Inactivo">Inactivo</option>
+            </select>
           </div>
         </form>
         <button className="buttonForm" type="submit" onClick={handleSend}>
