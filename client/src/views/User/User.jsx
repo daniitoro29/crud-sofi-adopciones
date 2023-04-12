@@ -73,7 +73,15 @@ const User = () => {
 
   return (
     <>
-      <h2>Usuarios Registrados</h2>
+      <div className="title-User">
+        <a href="/home">
+          <img
+            src="https://peluditosconfuturo.org/wp-content/uploads/2015/01/logo2.png"
+            alt="log"
+          />
+        </a>
+        <h2>Usuarios Registrados</h2>
+      </div>
       <div className="table-container">
         <table>
           <thead>

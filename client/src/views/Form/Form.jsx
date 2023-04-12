@@ -42,7 +42,15 @@ const Form = () => {
   return (
     <>
       <div className="general-container_form">
-        <h2>Registrarse</h2>
+        <div className="title-User">
+          <a href="/home">
+            <img
+              src="https://peluditosconfuturo.org/wp-content/uploads/2015/01/logo2.png"
+              alt="log"
+            />
+          </a>
+          <h2>Registrarse</h2>
+        </div>
         <form className="containter-form">
           <div>
             <label className="containter-form_label">Nombre: </label>

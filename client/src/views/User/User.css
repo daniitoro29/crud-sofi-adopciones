@@ -53,3 +53,13 @@ tbody:hover {
   box-shadow: 0 5px #F0FFF0;
   transform: translateY(4px);
 }
+
+.title-User {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-User img {
+  align-self: flex-start;
+}

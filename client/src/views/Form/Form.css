@@ -59,6 +59,7 @@
     border-radius: 5px;
     box-shadow: 0 1px #6178ad;
     color: #ffffff;
+    margin-top: 20px;
   }
   
   .buttonForm:hover {
@@ -69,4 +70,13 @@
     background-color: #8896b8;
     box-shadow: 0 5px #F0FFF0;
     transform: translateY(4px);
+  }
+  .general-container_form .title-User {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .general-container_form .title-User img {
+    align-self: flex-start;
   }
