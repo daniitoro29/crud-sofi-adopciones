@@ -3,6 +3,7 @@ import Home from "./views/Home/Home";
 import Form from "./views/Form/Form";
 import User from "./views/User/User";
 import Login from "./views/Login/Login";
+import Welcome from "./views/Welcome/Welcome";
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
       </Route>
       <Route path="/login">
         <Login />
+      </Route>
+      <Route path="/welcome">
+        <Welcome />
       </Route>
     </div>
   );
