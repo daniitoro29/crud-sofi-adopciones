@@ -1,6 +1,6 @@
 # **SOFI-ADOPCIONES** | CRUD
 
-Se realiza CRUD haciendo uso de PostgreSQL como base de datos, react para el frontend y nodeJS para el backend. Para levantar el servidor debe ubicarse en la carpeta api y ejecutar el comando `npm start` para levantar el frontend debe ubicarse en la carpeta cliente y ejecutar el comando `npm start`
+Se realiza CRUD haciendo uso de PostgreSQL como base de datos (sofiadopcionesdb), react para el frontend y nodeJS para el backend. Para levantar el servidor debe ubicarse en la carpeta api y ejecutar el comando `npm start` para levantar el frontend debe ubicarse en la carpeta client y ejecutar el comando `npm start`
 
 Ingresar a Registrate para registrar un nuevo usuario o a Usuarios para consultar los usuarios registrados, editarlos y/o eliminarlos.
 
@@ -24,5 +24,12 @@ Al dar clic en editar, se abre un formulario donde se muestran los datos actuale
 Al dar click en eliminar, el usuario es eliminado de la base de datos y deja de mostrarse en el listado de usuarios. 
 
 <img width="1722" alt="Captura de Pantalla 2023-04-11 a la(s) 11 06 41 p m" src="https://user-images.githubusercontent.com/97687455/231346795-7e6c5e1b-49e7-4f9f-9368-2c86bad1c4b9.png">
+
+#### Loguearse
+Para loguearse, debe ingresar los datos con los que se registró, si los datos ingresados son correctos, será redireccionado a una pantalla de bienvenida, de lo contrario, podrá visualizar un mensaje que le pide verificar la información. 
+<img width="1728" alt="Captura de Pantalla 2023-04-12 a la(s) 10 15 44 p m" src="https://user-images.githubusercontent.com/97687455/231639642-8d6f7da6-1e1c-4b05-81de-1c17452a39f6.png">
+<img width="1728" alt="Captura de Pantalla 2023-04-12 a la(s) 10 16 06 p m" src="https://user-images.githubusercontent.com/97687455/231639708-d882993c-b79e-4754-a172-cba20247887b.png">
+<img width="1728" alt="Captura de Pantalla 2023-04-12 a la(s) 10 17 18 p m" src="https://user-images.githubusercontent.com/97687455/231639923-1ad282a3-126f-4d78-8c32-383dd4846659.png">
+
 
 ## El proyecto se encuentra en desarrollo por lo cúal sus estilos y funcionalidad se irá mejorando. 
