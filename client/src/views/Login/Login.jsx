@@ -54,7 +54,7 @@ function Login() {
       </div>
       <form onSubmit={handleSubmit} className="login-form">
         <label>
-          Email:
+          <p>Email:</p>
           <input
             type="text"
             value={username}
@@ -62,7 +62,7 @@ function Login() {
           />
         </label>
         <label>
-          Contraseña:
+          <p>Contraseña:</p>
           <input
             type="password"
             value={password}
@@ -73,7 +73,11 @@ function Login() {
           Ingresar
         </button>
       </form>
-      {redirectToRegister ? <Redirect to="/welcome" /> : message}
+      {redirectToRegister ? (
+        <Redirect to="/welcome" />
+      ) : (
+        <p className="login-message_fail">{message}</p>
+      )}
     </div>
   );
 }
