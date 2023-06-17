@@ -8,9 +8,9 @@ import Welcome from "./views/Welcome/Welcome";
 function App() {
   return (
     <div className="App">
-      <Route path="/home">
-        <Home />
-      </Route>
+
+      <Route path="/home" render={() => <Home/>}/>
+
       <Route path="/register">
         <Form />
       </Route>
