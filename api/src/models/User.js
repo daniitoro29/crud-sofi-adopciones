@@ -6,10 +6,11 @@ module.exports = (sequelize) => {
             type: DataTypes.UUID,
             primaryKey: true,
             defaultValue: DataTypes.UUIDV4, // Para que se genere automáticamente
-/*             type: DataTypes.INTEGER,
-            primaryKey: true,
-            autoIncrement: true,  */
         },
+        Rol_Id: {
+            type: DataTypes.INTEGER, // o el tipo de datos correspondiente a la columna en la tabla "Rol"
+            allowNull: false,
+          },
         Usu_Nombre: {
             type: DataTypes.STRING,
             allowNull: false,
