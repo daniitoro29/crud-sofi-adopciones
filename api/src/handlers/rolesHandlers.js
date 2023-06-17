@@ -1,24 +1,54 @@
-const getRolesHandler = (req, res) => {
-    const { name } = req.query;
-    if (name) res.send(`Quiero buscar todos los roles que se llamen ${name}`);
-    else res.send("Quiero enviar todos los roles");
+const {createRol, getAllRoles, deleteRolById, updateRolId} = require('../controllers/rolesControllers');
+
+const getRolesHandler = async (req, res) => {
+    try {
+      const allRoles = await getAllRoles();
+      res.json(allRoles);
+    } catch (error) {
+      res.status(400).json({error: error.message});
+    }
   };
   
-  const getRolHandler = (req, res) => {
-    const { id } = req.params;
-    res.send("Va a enviar el detalle del rol");
-  };
-  
-  const createRolHandler = (req, res) => {
+  const createRolHandler = async (req, res) => {
     const {
       Rol_Id,
       Rol_Nombre,
     } = req.body;
-    res.send('Estoy por crear un rol con estos datos');
+    try {
+      const newRol = await createRol(Rol_Id, Rol_Nombre);
+      res.send(newRol);
+    } catch (error) {
+      res.status(400).json({error: error.message});
+    }
   };
   
+  const deleteRolHandler = async (req, res) => {
+    const {
+      id,
+    } = req.params
+    try {
+      const deleteRol = await deleteRolById(id);
+      res.send(deleteRol);
+    } catch (error) {
+      res.status(400).json({error: error.message});
+    }
+  }
+  
+  const updateRolHandler = async (req, res) => {
+    const {
+      id,
+    } = req.params;
+    const {Rol_Nombre} = req.body;
+    try {
+      const updateRol = await updateRolId(id, Rol_Nombre);
+      res.send(updateRol);
+    } catch (error) {
+      res.status(400).json({error: error.message});
+    }
+  }
   module.exports = {
     getRolesHandler,
-    getRolHandler,
     createRolHandler,
+    deleteRolHandler,
+    updateRolHandler
   };

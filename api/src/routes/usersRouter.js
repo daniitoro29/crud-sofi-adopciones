@@ -9,7 +9,7 @@ const {
 } = require('../handlers/usersHandlers');
 
 usersRouter.get('/', getUsersHandler);
-usersRouter.post('/', createUserHandler);    
+usersRouter.post('/', createUserHandler);
 usersRouter.get('/:id', getUserHandler);
 usersRouter.put('/:id', updateUserHandler);
 usersRouter.delete('/:id', deleteUserHandler);
