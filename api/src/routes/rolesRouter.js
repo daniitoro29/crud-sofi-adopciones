@@ -2,7 +2,7 @@ const { Router } = require('express');
 
 const rolesRouter = Router();
 const {   getRolesHandler,
-    createRolHandler, deleteRolHandler} = require('../handlers/rolesHandlers');
+    createRolHandler, deleteRolHandler, updateRolHandler} = require('../handlers/rolesHandlers');
 
 rolesRouter.get('/',getRolesHandler)
 
@@ -10,4 +10,5 @@ rolesRouter.get('/',getRolesHandler)
 
 rolesRouter.post('/', createRolHandler);
 rolesRouter.delete('/:id', deleteRolHandler);
+rolesRouter.put('/:id', updateRolHandler);
 module.exports = rolesRouter;
