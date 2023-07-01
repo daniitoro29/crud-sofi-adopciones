@@ -4,7 +4,9 @@ Se realiza CRUD haciendo uso de PostgreSQL como base de datos (sofiadopcionesdb)
 
 Ingresar a Registrate para registrar un nuevo usuario o a Usuarios para consultar los usuarios registrados, editarlos y/o eliminarlos.
 
-#### Página de inicio 
+
+
+#### Página de inicio sofi 
 <img width="1722" alt="Captura de Pantalla 2023-04-11 a la(s) 11 02 30 p m" src="https://user-images.githubusercontent.com/97687455/231346254-f4b9121a-6bbb-4705-a4d9-30aa53c4140d.png">
 
 #### Página para registrarse
