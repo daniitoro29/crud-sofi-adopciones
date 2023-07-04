@@ -5,6 +5,7 @@ const empleadosRouter = require('./empleadosRouter');
 const volunteersRouter = require('./volunteersRouter');
 const petsRouter = require('./petsRouter');
 const adoptersRouter = require('./adoptersRouter.js');
+const adoptionsRouter = require('./adoptionsRouter.js');
 
 const mainRouter = Router();
 
@@ -14,5 +15,6 @@ mainRouter.use('/voluntarios', volunteersRouter)
 mainRouter.use('/empleados', empleadosRouter);
 mainRouter.use('/pets', petsRouter);
 mainRouter.use('/adopters', adoptersRouter);
+mainRouter.use('/adoptions', adoptionsRouter);
 
 module.exports = mainRouter;
