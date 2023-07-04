@@ -20,4 +20,4 @@ const deleteAdopterById = async(Ado_User_Id) => await Adoptante.destroy({
     return adopterUpdate
 }
 
-module.exports = { createAdopter, getAllAdopters, deleteAdopterById, updateAdopterById, updateAdopterById }
+module.exports = { createAdopter, getAllAdopters, deleteAdopterById, updateAdopterById }
