@@ -4,6 +4,7 @@ import Form from "./views/Form/Form";
 import User from "./views/User/User";
 import Login from "./views/Login/Login";
 import Welcome from "./views/Welcome/Welcome";
+import Principal from "./views/Principal/Principal";
 
 function App() {
   return (
@@ -22,6 +23,9 @@ function App() {
       </Route>
       <Route path="/welcome">
         <Welcome />
+      </Route>
+      <Route path="/principal">
+        <Principal />
       </Route>
     </div>
   );

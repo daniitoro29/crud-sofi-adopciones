@@ -1,0 +1,9 @@
+.cont-redes img{
+    width: 3rem;
+    margin: 2rem 0.5em;
+    transition: transform 0.7s ease;
+    cursor: pointer;
+}
+.cont-redes img:hover{
+    transform: scale(1.1);
+}
